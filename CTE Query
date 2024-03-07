@@ -1,0 +1,12 @@
+SELECT E.name as movie_category, SUM (A.amount) as total_revenue,	
+	
+FROM payment A JOIN rental B	
+	ON A.rental_id = B.rental_id
+	JOIN inventory C
+	ON B.inventory_id = C.inventory_id
+	JOIN film_category D
+	ON C.film_id = D.film_id
+	JOIN category E
+	ON D.category_id = E.category_id
+GROUP BY movie_category	
+ORDER BY total_revenue DESC	
