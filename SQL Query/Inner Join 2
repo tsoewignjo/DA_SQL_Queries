@@ -1,0 +1,13 @@
+SELECT D.country, city, count(C.city_id) as city_count
+FROM customer A JOIN address B 
+ON A.address_id = B.address_id
+JOIN city C
+ON B.city_id = C.city_id
+JOIN country D
+ON C.country_id = D.country_id
+WHERE country IN ('India', 'China','United States', 
+'Japan', 'Mexico', 'Brazil', 'Russian Federation', 
+'Phillipines', 'Turkey', 'Indonesia')
+GROUP BY country, city
+ORDER BY city_count DESC
+LIMIT 10
