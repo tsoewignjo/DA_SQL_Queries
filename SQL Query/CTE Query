@@ -1,3 +1,5 @@
+#  Find the average amount paid by the top 5 customers using CTE
+
 WITH top_5_customer AS
 (
 SELECT A.first_name, 
