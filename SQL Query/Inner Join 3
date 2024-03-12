@@ -1,0 +1,14 @@
+SELECT A.first_name, A.last_name, C.city, D.country, SUM(E.amount) as total_payment
+FROM customer A JOIN address B 
+ON A.address_id = B.address_id
+JOIN city C
+ON B.city_id = C.city_id
+JOIN country D
+ON C.country_id = D.country_id
+JOIN payment E
+ON A.customer_id = E.customer_id
+WHERE C.city IN ('Aurora', 'Acua', 'Citrus Heights', 'Iwaki', 'Ambattur', 'Shanwei', 
+'So Leopoldo', 'Teboksary', 'Tianjin', 'Cianjur')
+GROUP BY A.first_name, A.last_name, C.city, D.country
+ORDER BY total_payment DESC
+LIMIT 5
