@@ -15,7 +15,10 @@ launch an online video rental service in order to stay competitive.
 - Do sales figures vary between geographic regions?
 
 # Data Set
-http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
+[DVD Rental Database](http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)
 
 # Platform
 PostgreSQL
+
+# Visualization
+[Rental sales per region](https://public.tableau.com/app/profile/tony.soewignjo/viz/Exercise3_10_17011121381340/Sheet1)
